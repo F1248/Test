@@ -1,0 +1,7 @@
+on: push
+
+jobs:
+  job:
+    runs-on: macos-latest
+    steps:
+      - run: /usr/bin/xcodebuild -version
