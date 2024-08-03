@@ -5,13 +5,5 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: |
-          echo "sw_vers"
-          /usr/bin/sw_vers
-          echo "\nwhoami"
-          /usr/bin/whoami
-          echo "\nxcodebuild -version"
-          /usr/bin/xcodebuild -version
-          echo "\nsystem_profiler SPHardwareDataType"
-          /usr/sbin/system_profiler SPHardwareDataType
-          echo "\nsystem_profiler SPSoftwareDataType"
-          /usr/sbin/system_profiler SPSoftwareDataType
+          /bin/ls
+          /bin/pwd
