@@ -1,9 +1,10 @@
-on: push
+on:
+  - push
+  - workflow_dispatch
 
 jobs:
   job:
     runs-on: macos-latest
     steps:
       - run: |
-          ls
-          pwd
+          /bin/ls /Applications
