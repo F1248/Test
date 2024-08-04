@@ -7,4 +7,4 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: |
-          /usr/sbin/softwareupdate --list --all --include-config-data
+          /usr/bin/sudo /usr/sbin/softwareupdate --install --all --include-config-data --restart --agree-to-license --verbose
