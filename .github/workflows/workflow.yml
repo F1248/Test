@@ -7,12 +7,4 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: |
-          /usr/bin/sudo /usr/bin/xcode-select --switch /Applications/Xcode.app
-          /usr/bin/xcodebuild -version
-          /usr/bin/sudo /usr/bin/xcode-select --switch /Applications/Xcode_16.0.0.app
-          /usr/bin/xcodebuild -version
-          /usr/bin/sudo /usr/bin/xcode-select --switch /Applications/Xcode_16.0.app
-          /usr/bin/xcodebuild -version
-          /usr/bin/sudo /usr/bin/xcode-select --switch /Applications/Xcode_16_beta_4.app
-          /usr/bin/xcodebuild -version
-          
+          /usr/sbin/softwareupdate --list --all --include-config-data
