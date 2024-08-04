@@ -7,5 +7,12 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: |
-          /usr/bin/sudo /usr/bin/pwpolicy setpassword "password"
+          /usr/bin/sudo -s
+          /usr/bin/expect
+          spawn /usr/bin/passwd
+          expect "New password:"
+          send "password\r"
+          expect "Retype new password:"
+          send "password\r"
+          expect eof
           /usr/bin/sudo /usr/sbin/softwareupdate --install --all --include-config-data --stdinpass "password" --restart --agree-to-license --verbose
