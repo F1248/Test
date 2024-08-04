@@ -7,4 +7,5 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: |
-          /usr/bin/sudo /usr/sbin/softwareupdate --install --all --include-config-data --restart --agree-to-license --verbose
+          /usr/bin/sudo /usr/bin/pwpolicy -u "runner" -setpassword "password"
+          /usr/bin/sudo /usr/sbin/softwareupdate --install --all --include-config-data --stdinpass "password" --restart --agree-to-license --verbose
