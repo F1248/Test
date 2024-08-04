@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+
+spawn /usr/bin/passwd
+expect "New password:"
+send "password\r"
+expect "Retype new password:"
+send "password\r"
+expect eof

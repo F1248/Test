@@ -7,12 +7,5 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: |
-          /usr/bin/sudo -s
-          /usr/bin/expect
-          spawn /usr/bin/passwd
-          expect "New password:"
-          send "password\r"
-          expect "Retype new password:"
-          send "password\r"
-          expect eof
+          test.exp
           /usr/bin/sudo /usr/sbin/softwareupdate --install --all --include-config-data --stdinpass "password" --restart --agree-to-license --verbose
