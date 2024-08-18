@@ -7,4 +7,5 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: |
+          zsh
           where swiftformat
