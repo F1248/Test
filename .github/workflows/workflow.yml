@@ -4,7 +4,8 @@ on:
 
 jobs:
   job:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - run: |
-          zsh -c "where swiftformat"
+          which mkdir
+          which mv
