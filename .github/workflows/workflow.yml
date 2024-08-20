@@ -1,6 +1,7 @@
 on:
-  - push
-  - workflow_dispatch
+  push:
+    paths: Test1.txt
+  workflow_dispatch:
 
 jobs:
   job:
