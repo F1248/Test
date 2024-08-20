@@ -10,3 +10,4 @@ jobs:
       - run: |
           which mkdir
           which cp
+          echo Test
