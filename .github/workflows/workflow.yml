@@ -9,4 +9,4 @@ jobs:
     steps:
       - run: |
           which mkdir
-          which mv
+          which cp
