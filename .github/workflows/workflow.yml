@@ -1,8 +1,8 @@
 on:
   push:
     paths:
-      Test1.txt
-      .github/workflows/workflow.yml
+      - Test1.txt
+      - .github/workflows/workflow.yml
   workflow_dispatch:
 
 jobs:
