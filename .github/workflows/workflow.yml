@@ -7,9 +7,7 @@ on:
 
 jobs:
   job:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - run: |
-          which mkdir
-          which cp
-          echo Test 43
+          /bin/ls /Applications
