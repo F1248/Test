@@ -1,9 +1,6 @@
 on:
-  push:
-    paths:
-      - Test1.txt
-      - .github/workflows/workflow.yml
-  workflow_dispatch:
+  - push
+  - workflow_dispatch
 
 jobs:
   job:
