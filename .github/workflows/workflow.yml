@@ -6,5 +6,4 @@ jobs:
   job:
     runs-on: macos-latest
     steps:
-      - run: |
-          /bin/ls /Applications
+      - run: echo "Hello, world!"
