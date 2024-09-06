@@ -6,4 +6,4 @@ jobs:
   job:
     runs-on: macos-latest
     steps:
-      - run: echo "Hello, world!"
+      - run: echo \"${{ github.ref }}\"
