@@ -1,9 +1,12 @@
 on:
-  - push
-  - workflow_dispatch
+  push:
+  workflow_dispatch:
+    inputs:
+      Test:
+        type: string
 
 jobs:
   job:
     runs-on: macos-latest
     steps:
-      - run: echo \"${{ github.ref_name }}\"
+      - run: echo \"${{ inputs.Test }}\"
