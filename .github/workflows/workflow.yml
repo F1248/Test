@@ -9,4 +9,4 @@ jobs:
   job:
     runs-on: macos-latest
     steps:
-      - run: echo \"${{ inputs.Test }}\"
+      - run: where git
