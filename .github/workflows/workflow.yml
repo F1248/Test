@@ -9,4 +9,4 @@ jobs:
   job:
     runs-on: macos-latest
     steps:
-      - run: where git
+      - run: zsh -c "where git"
