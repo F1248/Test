@@ -9,4 +9,11 @@ jobs:
   job:
     runs-on: macos-latest
     steps:
-      - run: zsh -c "where git"
+
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - run: |
+          eval $(
+            /opt/homebrew/bin/git for-each-ref --shell --format="echo %(refname)"
+          )
