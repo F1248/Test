@@ -15,5 +15,5 @@ jobs:
 
       - run: |
           eval $(
-            /opt/homebrew/bin/git for-each-ref --shell --format="echo %(refname)"
+            /opt/homebrew/bin/git for-each-ref --shell --format="echo %(refname);"
           )
