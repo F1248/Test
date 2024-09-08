@@ -17,3 +17,5 @@ jobs:
       - run: |
           echo $GITHUB_WORKSPACE
           pwd
+          cd ../..
+          ls
