@@ -10,9 +10,12 @@ jobs:
       - uses: actions/checkout@main
         with: 
           repository: F1248/Genius
+          path: Genius
           fetch-depth: 0
 
       - run: |
           echo $GITHUB_WORKSPACE
           pwd
+          ls
+          cd Genius
           ls
