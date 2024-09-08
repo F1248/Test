@@ -15,6 +15,4 @@ jobs:
         with: { fetch-depth: 0 }
 
       - run: |
-          eval $(
-            /opt/homebrew/bin/git for-each-ref --shell --format="echo %(refname);"
-          )
+          echo $GITHUB_WORKSPACE
