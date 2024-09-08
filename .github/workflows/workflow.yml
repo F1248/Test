@@ -10,12 +10,7 @@ jobs:
     runs-on: macos-latest
     steps:
 
-      - name: Checkout
-        uses: actions/checkout@main
-        with: { fetch-depth: 0 }
-
       - run: |
           echo $GITHUB_WORKSPACE
           pwd
-          cd ../..
           ls
