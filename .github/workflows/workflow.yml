@@ -1,14 +1,16 @@
 on:
   push:
   workflow_dispatch:
-    inputs:
-      Test:
-        type: string
 
 jobs:
   job:
     runs-on: macos-latest
     steps:
+
+      - uses: actions/checkout@main
+        with: 
+          repository: F1248/Genius
+          fetch-depth: 0
 
       - run: |
           echo $GITHUB_WORKSPACE
