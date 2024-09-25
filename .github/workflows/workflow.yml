@@ -4,17 +4,7 @@ on:
 
 jobs:
   job:
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
 
-      - uses: actions/checkout@main
-        with: 
-          repository: F1248/Genius
-          fetch-depth: 0
-
       - run: |
-          eval $(
-            /opt/homebrew/bin/git for-each-ref --format="
-              /bin/echo %(refname);
-            "
-          )
