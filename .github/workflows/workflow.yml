@@ -8,13 +8,5 @@ jobs:
     steps:
 
       - run: |
-          PATH="/usr/bin:/bin"
-          echo 42
-          echo $PATH
-          echo 43
-
-      - run: |
-          echo 44
-          echo $PATH
-          echo 45
-          ps -p $$ 
+          where swiftlint
+          where swiftformat
