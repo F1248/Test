@@ -8,5 +8,4 @@ jobs:
     steps:
 
       - run: |
-          zsh -c "where swiftlint"
           zsh -c "where swiftformat"
