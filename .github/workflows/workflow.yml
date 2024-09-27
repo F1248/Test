@@ -9,5 +9,11 @@ jobs:
 
       - run: |
           PATH="/usr/bin:/bin"
-          # echo $PATH
-          git --version
+          echo 42
+          echo $PATH
+          echo 43
+
+      - run: |
+          echo 44
+          echo $PATH
+          echo 45
