@@ -17,3 +17,4 @@ jobs:
           echo 44
           echo $PATH
           echo 45
+          ps -p $$ 
