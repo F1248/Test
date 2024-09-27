@@ -8,4 +8,5 @@ jobs:
     steps:
 
       - run: |
+          PATH="/usr/bin:/bin"
           echo $PATH
