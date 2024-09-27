@@ -8,5 +8,6 @@ jobs:
     steps:
 
       - run: |
-          PATH="/usr/bin:/bin"
+          PATH="/bin"
           echo $PATH
+          git --version
