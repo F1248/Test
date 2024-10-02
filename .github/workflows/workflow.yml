@@ -8,8 +8,11 @@ jobs:
     steps:
 
       - run: |
-          mkdir -p Test.app/Directory
-          echo "Test" > Test.app/Directory/File.txt
+          mkdir Test.app
+          mkdir Test.app/Directory1
+          mkdir Test.app/Directory2
+          echo "Test" > Test.app/Directory1/File1.txt
+          echo "Test" > Test.app/Directory2/File2.txt
 
       - name: Upload Test
         uses: actions/upload-artifact@main
