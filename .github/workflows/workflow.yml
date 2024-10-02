@@ -8,11 +8,11 @@ jobs:
     steps:
 
       - run: |
-          mkdir Test
-          echo "Test" > Test/Test.txt
+          mkdir Test.app
+          echo "Test" > Test.app/Test.txt
 
       - name: Upload Test
         uses: actions/upload-artifact@main
         with:
           name: Test
-          path: Test
+          path: Test.app
