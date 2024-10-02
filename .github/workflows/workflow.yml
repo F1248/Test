@@ -8,4 +8,11 @@ jobs:
     steps:
 
       - run: |
-          zsh -c "where swiftformat"
+          mkdir Test
+          echo "Test" > Test/Test.txt
+
+      - name: Upload Test
+        uses: actions/upload-artifact@main
+        with:
+          name: Test
+          path: Test
