@@ -8,7 +8,7 @@ jobs:
     steps:
 
       - run: |
-          mkdir Test.app/Directory
+          mkdir -p Test.app/Directory
           echo "Test" > Test.app/Directory/File.txt
 
       - name: Upload Test
