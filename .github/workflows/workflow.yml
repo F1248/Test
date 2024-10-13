@@ -9,3 +9,5 @@ jobs:
 
       - run: |
           arch
+          system_profiler SPSoftwareDataType
+          system_profiler SPHardwareDataType
