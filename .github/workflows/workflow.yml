@@ -4,7 +4,7 @@ on:
 
 jobs:
   job:
-    runs-on: macos-15-large
+    runs-on: macos-13
     steps:
 
       - run: |
