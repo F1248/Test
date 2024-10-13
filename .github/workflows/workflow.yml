@@ -11,5 +11,4 @@ jobs:
           arch
           system_profiler SPSoftwareDataType
           system_profiler SPHardwareDataType
-          uname -a
-          sw_vers
+          uname -m
