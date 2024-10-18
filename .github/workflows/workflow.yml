@@ -8,7 +8,5 @@ jobs:
     steps:
 
       - run: |
-          arch
-          system_profiler SPSoftwareDataType
-          system_profiler SPHardwareDataType
-          uname -m
+          sudo firmwarepasswd -check
+          sudo firmwarepasswd -mode
