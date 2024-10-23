@@ -1,12 +1,11 @@
 on:
-  push:
-  workflow_dispatch:
+    push:
+    workflow_dispatch:
 
 jobs:
-  job:
-    runs-on: macos-13
-    steps:
+    job:
+        runs-on: macos-15
+        steps:
 
-      - run: |
-          sudo firmwarepasswd -check
-          sudo firmwarepasswd -mode
+            - run: |
+                echo Test
