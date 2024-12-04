@@ -12,7 +12,16 @@ jobs:
               with:
                 repository: sindresorhus/Pasteboard-Viewer
                 fetch-depth: 0
-
-            - run: |
-                echo "$(xcodebuild -version | tr "\n" " ")selected"
-                xcodebuild CODE_SIGNING_ALLOWED=NO 
+    
+            - name: Resolve Dependencies
+              run: xcodebuild -resolvePackageDependencies
+    
+            - name: Clean Build
+              run: xcodebuild clean
+    
+            - name: Build Project
+              run: |
+                xcodebuild CODE_SIGNING_ALLOWED=NO -scheme "Pasteboard Viewer" -destination "generic/platform=macOS"
+    
+            - name: Debug Directory
+              run: ls -R build/Release
