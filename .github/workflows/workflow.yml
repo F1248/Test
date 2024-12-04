@@ -12,4 +12,5 @@ jobs:
               with:
                 repository: F1248/Genius
     
+            - run: defaults write ~/Library/Preferences/com.apple.dt.Xcode.plist IDESkipPackagePluginFingerprintValidatation -boolean true
             - run: xcodebuild -scheme Genius
