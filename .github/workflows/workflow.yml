@@ -7,5 +7,13 @@ jobs:
         runs-on: macos-15
         steps:
 
+            - name: Checkout
+              uses: actions/checkout@main
+              with:
+                repository: sindresorhus/Pasteboard-Viewer
+                path: Pasteboard-Viewer
+                fetch-depth: 0
+
             - run: |
-                echo Test
+                echo "$(xcodebuild -version | tr "\n" " ")selected"
+                xcodebuild
