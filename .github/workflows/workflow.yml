@@ -12,4 +12,4 @@ jobs:
               with:
                 repository: F1248/Genius
     
-            - run: xcodebuild -scheme Genius
+            - run: xcodebuild
