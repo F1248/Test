@@ -12,8 +12,4 @@ jobs:
               with:
                 repository: sindresorhus/Pasteboard-Viewer
     
-            - run: xcodebuild -resolvePackageDependencies
-    
-            - run: xcodebuild clean
-    
-            - run: xcodebuild CODE_SIGNING_ALLOWED=NO
+            - run: xcodebuild CODE_SIGNING_ALLOWED=NO -scheme "Pasteboard Viewer" -destination "generic/platform=macOS"
