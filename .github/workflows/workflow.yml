@@ -11,17 +11,9 @@ jobs:
               uses: actions/checkout@main
               with:
                 repository: sindresorhus/Pasteboard-Viewer
-                fetch-depth: 0
     
-            - name: Resolve Dependencies
-              run: xcodebuild -resolvePackageDependencies
+            - run: xcodebuild -resolvePackageDependencies
     
-            - name: Clean Build
-              run: xcodebuild clean
+            - run: xcodebuild clean
     
-            - name: Build Project
-              run: |
-                xcodebuild CODE_SIGNING_ALLOWED=NO -scheme "Pasteboard Viewer" -destination "generic/platform=macOS"
-    
-            - name: Debug Directory
-              run: ls -R build/Release
+            - run: xcodebuild CODE_SIGNING_ALLOWED=NO -scheme "Pasteboard Viewer" -destination "generic/platform=macOS"
