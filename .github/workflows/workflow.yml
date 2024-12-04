@@ -16,4 +16,5 @@ jobs:
 
             - run: |
                 echo "$(xcodebuild -version | tr "\n" " ")selected"
+                ls
                 xcodebuild
