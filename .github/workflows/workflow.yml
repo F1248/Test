@@ -14,4 +14,6 @@ jobs:
     
             - run: xcodebuild -resolvePackageDependencies
     
+            - run: xcodebuild clean
+    
             - run: xcodebuild CODE_SIGNING_ALLOWED=NO
