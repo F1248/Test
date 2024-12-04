@@ -10,6 +10,6 @@ jobs:
             - name: Checkout
               uses: actions/checkout@main
               with:
-                repository: sindresorhus/Pasteboard-Viewer
+                repository: F1248/Genius
     
-            - run: xcodebuild CODE_SIGNING_ALLOWED=NO -scheme "Pasteboard Viewer"
+            - run: xcodebuild -scheme Genius
