@@ -11,10 +11,8 @@ jobs:
               uses: actions/checkout@main
               with:
                 repository: sindresorhus/Pasteboard-Viewer
-                path: Pasteboard-Viewer
                 fetch-depth: 0
 
             - run: |
                 echo "$(xcodebuild -version | tr "\n" " ")selected"
-                ls
                 xcodebuild
