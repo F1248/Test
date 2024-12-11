@@ -9,8 +9,6 @@ jobs:
 
             - name: Checkout
               uses: actions/checkout@main
-              with:
-                repository: F1248/Genius
     
             - run: defaults write ~/Library/Preferences/com.apple.dt.Xcode.plist IDESkipPackagePluginFingerprintValidatation -boolean true
-            - run: xcodebuild -scheme Genius
+            - run: xcodebuild
