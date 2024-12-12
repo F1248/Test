@@ -115,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A44C01332D0A38090093A20F /* Build configuration list for PBXProject "SwiftTest" */;
+			buildConfigurationList = A44C01332D0A38090093A20F /* Build configuration list for PBXProject "Test" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -329,7 +329,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A44C01332D0A38090093A20F /* Build configuration list for PBXProject "SwiftTest" */ = {
+		A44C01332D0A38090093A20F /* Build configuration list for PBXProject "Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A44C01452D0A380B0093A20F /* Debug */,
