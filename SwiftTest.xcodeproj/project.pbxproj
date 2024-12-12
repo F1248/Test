@@ -66,6 +66,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				A46EE8332D0B5C8500336902 /* PBXTargetDependency */,
+				A46EE8352D0B5C8500336902 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A44C013A2D0A38090093A20F /* SwiftTest */,
@@ -135,6 +137,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A46EE8332D0B5C8500336902 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A46EE8322D0B5C8500336902 /* Defaults */;
+		};
+		A46EE8352D0B5C8500336902 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A46EE8342D0B5C8500336902 /* DefaultsMacros */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A44C01452D0A380B0093A20F /* Debug */ = {
@@ -342,6 +355,16 @@
 			productName = Defaults;
 		};
 		A44C01542D0A39B60093A20F /* DefaultsMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A44C01512D0A39B60093A20F /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = DefaultsMacros;
+		};
+		A46EE8322D0B5C8500336902 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A44C01512D0A39B60093A20F /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		A46EE8342D0B5C8500336902 /* DefaultsMacros */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A44C01512D0A39B60093A20F /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = DefaultsMacros;
