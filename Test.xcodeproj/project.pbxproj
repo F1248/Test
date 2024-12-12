@@ -23,13 +23,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A44C01382D0A38090093A20F /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44C01382D0A38090093A20F /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A44C013A2D0A38090093A20F /* SwiftTest */ = {
+		A44C013A2D0A38090093A20F /* Test */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SwiftTest;
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -49,7 +49,7 @@
 		A44C012F2D0A38090093A20F = {
 			isa = PBXGroup;
 			children = (
-				A44C013A2D0A38090093A20F /* SwiftTest */,
+				A44C013A2D0A38090093A20F /* Test */,
 				A44C01392D0A38090093A20F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 		A44C01392D0A38090093A20F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A44C01382D0A38090093A20F /* SwiftTest.app */,
+				A44C01382D0A38090093A20F /* Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,9 +75,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A44C01372D0A38090093A20F /* SwiftTest */ = {
+		A44C01372D0A38090093A20F /* Test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A44C01472D0A380B0093A20F /* Build configuration list for PBXNativeTarget "SwiftTest" */;
+			buildConfigurationList = A44C01472D0A380B0093A20F /* Build configuration list for PBXNativeTarget "Test" */;
 			buildPhases = (
 				A46EE84C2D0B5EA500336902 /* Headers */,
 				A44C01342D0A38090093A20F /* Sources */,
@@ -90,14 +90,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				A44C013A2D0A38090093A20F /* SwiftTest */,
+				A44C013A2D0A38090093A20F /* Test */,
 			);
-			name = SwiftTest;
+			name = Test;
 			packageProductDependencies = (
 				A46EE8502D0B5EB400336902 /* Defaults */,
 			);
-			productName = SwiftTest;
-			productReference = A44C01382D0A38090093A20F /* SwiftTest.app */;
+			productName = Test;
+			productReference = A44C01382D0A38090093A20F /* Test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A44C01372D0A38090093A20F /* SwiftTest */,
+				A44C01372D0A38090093A20F /* Test */,
 			);
 		};
 /* End PBXProject section */
@@ -295,7 +295,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.F1248.SwiftTest;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.F1248.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -319,7 +319,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.F1248.SwiftTest;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.F1248.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -338,7 +338,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A44C01472D0A380B0093A20F /* Build configuration list for PBXNativeTarget "SwiftTest" */ = {
+		A44C01472D0A380B0093A20F /* Build configuration list for PBXNativeTarget "Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A44C01482D0A380B0093A20F /* Debug */,

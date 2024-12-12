@@ -2,7 +2,7 @@ import Defaults
 import SwiftUI
 
 @main
-struct SwiftTestApp: App {
+struct TestApp: App {
 
     var body: some Scene {
         WindowGroup {
