@@ -11,13 +11,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A44C01382D0A38090093A20F /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44C01382D0A38090093A20F /* DefaultsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefaultsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A44C013A2D0A38090093A20F /* Test */ = {
+		A44C013A2D0A38090093A20F /* DefaultsTest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Test;
+			path = DefaultsTest;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -37,7 +37,7 @@
 		A44C012F2D0A38090093A20F = {
 			isa = PBXGroup;
 			children = (
-				A44C013A2D0A38090093A20F /* Test */,
+				A44C013A2D0A38090093A20F /* DefaultsTest */,
 				A44C01392D0A38090093A20F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,7 +45,7 @@
 		A44C01392D0A38090093A20F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A44C01382D0A38090093A20F /* Test.app */,
+				A44C01382D0A38090093A20F /* DefaultsTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,9 +53,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A44C01372D0A38090093A20F /* Test */ = {
+		A44C01372D0A38090093A20F /* DefaultsTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A44C01472D0A380B0093A20F /* Build configuration list for PBXNativeTarget "Test" */;
+			buildConfigurationList = A44C01472D0A380B0093A20F /* Build configuration list for PBXNativeTarget "DefaultsTest" */;
 			buildPhases = (
 				A44C01342D0A38090093A20F /* Sources */,
 				A44C01352D0A38090093A20F /* Frameworks */,
@@ -66,14 +66,14 @@
 				A4D9E7842D0B754000EA25D7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				A44C013A2D0A38090093A20F /* Test */,
+				A44C013A2D0A38090093A20F /* DefaultsTest */,
 			);
-			name = Test;
+			name = DefaultsTest;
 			packageProductDependencies = (
 				A46EE8502D0B5EB400336902 /* Defaults */,
 			);
-			productName = Test;
-			productReference = A44C01382D0A38090093A20F /* Test.app */;
+			productName = DefaultsTest;
+			productReference = A44C01382D0A38090093A20F /* DefaultsTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +91,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A44C01332D0A38090093A20F /* Build configuration list for PBXProject "Test" */;
+			buildConfigurationList = A44C01332D0A38090093A20F /* Build configuration list for PBXProject "DefaultsTest" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -108,7 +108,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A44C01372D0A38090093A20F /* Test */,
+				A44C01372D0A38090093A20F /* DefaultsTest */,
 			);
 		};
 /* End PBXProject section */
@@ -268,7 +268,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.F1248.Test;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.F1248.DefaultsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -292,7 +292,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.F1248.Test;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.F1248.DefaultsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -302,7 +302,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A44C01332D0A38090093A20F /* Build configuration list for PBXProject "Test" */ = {
+		A44C01332D0A38090093A20F /* Build configuration list for PBXProject "DefaultsTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A44C01452D0A380B0093A20F /* Debug */,
@@ -311,7 +311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A44C01472D0A380B0093A20F /* Build configuration list for PBXNativeTarget "Test" */ = {
+		A44C01472D0A380B0093A20F /* Build configuration list for PBXNativeTarget "DefaultsTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A44C01482D0A380B0093A20F /* Debug */,
