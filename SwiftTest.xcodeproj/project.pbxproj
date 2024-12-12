@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A44C01532D0A39B60093A20F /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = A44C01522D0A39B60093A20F /* Defaults */; };
-		A44C01552D0A39B60093A20F /* DefaultsMacros in Frameworks */ = {isa = PBXBuildFile; productRef = A44C01542D0A39B60093A20F /* DefaultsMacros */; };
+		A46EE8512D0B5EB400336902 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = A46EE8502D0B5EB400336902 /* Defaults */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A46EE84D2D0B5EA800336902 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A44C01382D0A38090093A20F /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,8 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A44C01552D0A39B60093A20F /* DefaultsMacros in Frameworks */,
-				A44C01532D0A39B60093A20F /* Defaults in Frameworks */,
+				A46EE8512D0B5EB400336902 /* Defaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,28 +64,37 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A46EE84C2D0B5EA500336902 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		A44C01372D0A38090093A20F /* SwiftTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A44C01472D0A380B0093A20F /* Build configuration list for PBXNativeTarget "SwiftTest" */;
 			buildPhases = (
+				A46EE84C2D0B5EA500336902 /* Headers */,
 				A44C01342D0A38090093A20F /* Sources */,
 				A44C01352D0A38090093A20F /* Frameworks */,
 				A44C01362D0A38090093A20F /* Resources */,
+				A46EE84D2D0B5EA800336902 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A46EE8332D0B5C8500336902 /* PBXTargetDependency */,
-				A46EE8352D0B5C8500336902 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A44C013A2D0A38090093A20F /* SwiftTest */,
 			);
 			name = SwiftTest;
 			packageProductDependencies = (
-				A44C01522D0A39B60093A20F /* Defaults */,
-				A44C01542D0A39B60093A20F /* DefaultsMacros */,
+				A46EE8502D0B5EB400336902 /* Defaults */,
 			);
 			productName = SwiftTest;
 			productReference = A44C01382D0A38090093A20F /* SwiftTest.app */;
@@ -106,7 +125,7 @@
 			mainGroup = A44C012F2D0A38090093A20F;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A44C01512D0A39B60093A20F /* XCRemoteSwiftPackageReference "Defaults" */,
+				A46EE84F2D0B5EB400336902 /* XCRemoteSwiftPackageReference "Defaults" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A44C01392D0A38090093A20F /* Products */;
@@ -137,17 +156,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A46EE8332D0B5C8500336902 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = A46EE8322D0B5C8500336902 /* Defaults */;
-		};
-		A46EE8352D0B5C8500336902 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = A46EE8342D0B5C8500336902 /* DefaultsMacros */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A44C01452D0A380B0093A20F /* Debug */ = {
@@ -184,6 +192,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -247,6 +256,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -276,6 +286,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -299,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -338,7 +350,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A44C01512D0A39B60093A20F /* XCRemoteSwiftPackageReference "Defaults" */ = {
+		A46EE84F2D0B5EB400336902 /* XCRemoteSwiftPackageReference "Defaults" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/Defaults";
 			requirement = {
@@ -349,25 +361,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A44C01522D0A39B60093A20F /* Defaults */ = {
+		A46EE8502D0B5EB400336902 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A44C01512D0A39B60093A20F /* XCRemoteSwiftPackageReference "Defaults" */;
+			package = A46EE84F2D0B5EB400336902 /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = Defaults;
-		};
-		A44C01542D0A39B60093A20F /* DefaultsMacros */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A44C01512D0A39B60093A20F /* XCRemoteSwiftPackageReference "Defaults" */;
-			productName = DefaultsMacros;
-		};
-		A46EE8322D0B5C8500336902 /* Defaults */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A44C01512D0A39B60093A20F /* XCRemoteSwiftPackageReference "Defaults" */;
-			productName = Defaults;
-		};
-		A46EE8342D0B5C8500336902 /* DefaultsMacros */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A44C01512D0A39B60093A20F /* XCRemoteSwiftPackageReference "Defaults" */;
-			productName = DefaultsMacros;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
