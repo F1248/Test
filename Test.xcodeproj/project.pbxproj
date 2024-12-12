@@ -10,18 +10,6 @@
 		A46EE8512D0B5EB400336902 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = A46EE8502D0B5EB400336902 /* Defaults */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		A46EE84D2D0B5EA800336902 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		A44C01382D0A38090093A20F /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,30 +52,18 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		A46EE84C2D0B5EA500336902 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		A44C01372D0A38090093A20F /* Test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A44C01472D0A380B0093A20F /* Build configuration list for PBXNativeTarget "Test" */;
 			buildPhases = (
-				A46EE84C2D0B5EA500336902 /* Headers */,
 				A44C01342D0A38090093A20F /* Sources */,
 				A44C01352D0A38090093A20F /* Frameworks */,
-				A44C01362D0A38090093A20F /* Resources */,
-				A46EE84D2D0B5EA800336902 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A4D9E7842D0B754000EA25D7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A44C013A2D0A38090093A20F /* Test */,
@@ -137,16 +113,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		A44C01362D0A38090093A20F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		A44C01342D0A38090093A20F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -156,6 +122,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4D9E7842D0B754000EA25D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A4D9E7832D0B754000EA25D7 /* Defaults */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A44C01452D0A380B0093A20F /* Debug */ = {
@@ -362,6 +335,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		A46EE8502D0B5EB400336902 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A46EE84F2D0B5EB400336902 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		A4D9E7832D0B754000EA25D7 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A46EE84F2D0B5EB400336902 /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = Defaults;
