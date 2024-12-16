@@ -9,4 +9,4 @@ jobs:
     
             - run: |
                 system_profiler SPHardwareDataType
-                /usr/sbin/firmwarepasswd -check
+                sudo firmwarepasswd -check
