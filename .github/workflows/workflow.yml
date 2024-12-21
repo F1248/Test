@@ -8,4 +8,4 @@ jobs:
         steps:
     
             - run: |
-                sysctl hw.cpufrequency
+                echo Test
