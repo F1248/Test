@@ -4,8 +4,9 @@ on:
 
 jobs:
     job:
-        runs-on: macos-12
+        runs-on: macos-13
         steps:
     
             - run: |
-                echo Test
+                system_profiler SPHardwareDataType
+                sysctl hw.cpufrequency
