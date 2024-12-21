@@ -10,3 +10,5 @@ jobs:
             - run: |
                 system_profiler SPHardwareDataType
                 sysctl hw.cpufrequency
+                sysctl hw.cpufrequency
+                sysctl hw.cpufrequency
