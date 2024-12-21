@@ -8,5 +8,4 @@ jobs:
         steps:
     
             - run: |
-                system_profiler SPHardwareDataType
-                sudo firmwarepasswd -check
+                sysctl hw.cpufrequency
