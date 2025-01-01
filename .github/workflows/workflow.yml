@@ -9,6 +9,8 @@ jobs:
     
             - run: pwd
             - uses: actions/checkout@main
+              with:
+                fetch-depth: 0
             - run: |
                 pwd
                 ls
