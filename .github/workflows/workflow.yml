@@ -4,11 +4,8 @@ on:
 
 jobs:
     job:
-        runs-on: macos-13
+        runs-on: macos-15
         steps:
     
-            - run: |
-                system_profiler SPHardwareDataType
-                sysctl hw.cpufrequency
-                sysctl hw.cpufrequency
-                sysctl hw.cpufrequency
+            - uses: actions/checkout@main
+            - run: ls
