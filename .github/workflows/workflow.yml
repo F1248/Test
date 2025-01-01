@@ -10,4 +10,4 @@ jobs:
             - name: Checkout
               uses: actions/checkout@main
               with: { fetch-depth: 0 }
-            - run: ls
+            - run: ls -A
