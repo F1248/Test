@@ -7,10 +7,7 @@ jobs:
         runs-on: macos-15
         steps:
     
-            - run: pwd
-            - uses: actions/checkout@main
-              with:
-                fetch-depth: 0
-            - run: |
-                pwd
-                ls
+            - name: Checkout
+              uses: actions/checkout@main
+              with: { fetch-depth: 0 }
+            - run: ls
