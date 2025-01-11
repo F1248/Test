@@ -6,4 +6,7 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - uses: maxim-lobanov/setup-xcode@master
+            - name: Setup Xcode
+              uses: maxim-lobanov/setup-xcode@master
+              with:
+                  xcode-version: lastest
