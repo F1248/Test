@@ -6,4 +6,6 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - run: false | true
+            - run: |
+                set -o pipefail
+                false | true
