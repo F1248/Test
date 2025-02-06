@@ -6,6 +6,6 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - run: |
-                set -e
+            - shell: bash
+              run: |
                 false | true
