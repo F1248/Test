@@ -7,5 +7,5 @@ jobs:
         runs-on: macos-15
         steps:
             - run: |
-                set -o pipefail
+                set -e
                 false | true
