@@ -2,10 +2,13 @@ on:
     push:
     workflow_dispatch:
 
+defaults:
+    run:
+        shell: bash
+
 jobs:
     job:
         runs-on: macos-15
         steps:
-            - shell: bash
-              run: |
+            - run: |
                 false | true
