@@ -10,5 +10,12 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - run: |
-                ls /Applications
+            - name: Install xcodes
+              run: |
+                curl --remote-name --location https://github.com/XcodesOrg/xcodes/releases/latest/download/xcodes.zip
+                unzip xcodes.zip
+                echo "xcodes $(./xcodes version) installed"
+
+            - name: Install Xcode
+              run: |
+                ./xcodes download --use-fastlane-auth --data-source apple 0
