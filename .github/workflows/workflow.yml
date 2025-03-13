@@ -10,11 +10,11 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            # - name: Install xcodes
-            #   run: |
-            #     curl --remote-name --location https://github.com/XcodesOrg/xcodes/releases/latest/download/xcodes.zip
-            #     unzip xcodes.zip
-            #     echo "xcodes $(./xcodes version) installed"
+            - name: Install xcodes
+              run: |
+                curl --remote-name --location https://github.com/XcodesOrg/xcodes/releases/latest/download/xcodes.zip
+                unzip xcodes.zip
+                echo "xcodes $(./xcodes version) installed"
 
             - name: Install fastlane
               run: |
@@ -25,9 +25,8 @@ jobs:
               run: |
                 mkdir -p "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}"
                 echo -E "$FASTLANE_COOKIE" > "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}/cookie"
-                cat "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}/cookie"
-                shasum -a 256 "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}/cookie"
                 fastlane spaceauth --user ${{ secrets.APPLE_ACCOUNT_EMAIL }}
+                ./xcodes download --use-fastlane-auth --fastlane-user ${{ secrets.APPLE_ACCOUNT_EMAIL }} --data-source apple 0 || true
               env:
                 FASTLANE_PASSWORD: ${{ secrets.APPLE_ACCOUNT_PASSWORD }}
                 FASTLANE_COOKIE: ${{ secrets.FASTLANE_COOKIE }}
