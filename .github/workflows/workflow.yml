@@ -23,9 +23,9 @@ jobs:
 
             - name: Install Xcode
               run: |
-                # mkdir -p "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}"
-                # echo -E "$FASTLANE_COOKIE" > "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}/cookiesecret_file.txt"
-                # fastlane spaceauth --user ${{ secrets.APPLE_ACCOUNT_EMAIL }}
+                mkdir -p "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}"
+                echo -E "$FASTLANE_COOKIE" > "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}/cookiesecret_file.txt"
+                fastlane spaceauth --user ${{ secrets.APPLE_ACCOUNT_EMAIL }}
                 ./xcodes download --use-fastlane-auth --data-source apple 0
               env:
                 FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
