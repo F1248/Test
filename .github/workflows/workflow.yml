@@ -28,5 +28,4 @@ jobs:
                 fastlane spaceauth --user ${{ secrets.APPLE_ACCOUNT_EMAIL }}
                 ./xcodes download --use-fastlane-auth --fastlane-user ${{ secrets.APPLE_ACCOUNT_EMAIL }} --data-source apple 0 || true
               env:
-                FASTLANE_PASSWORD: ${{ secrets.APPLE_ACCOUNT_PASSWORD }}
                 FASTLANE_COOKIE: ${{ secrets.FASTLANE_COOKIE }}
