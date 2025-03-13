@@ -25,7 +25,7 @@ jobs:
               run: |
                 mkdir -p "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}"
                 echo -E "$FASTLANE_COOKIE" > "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}/cookie"
-                shasum -a 256 "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}/cookie"
+                cat "$HOME/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}/cookie"
                 # fastlane spaceauth --user ${{ secrets.APPLE_ACCOUNT_EMAIL }}
               env:
                 FASTLANE_PASSWORD: ${{ secrets.APPLE_ACCOUNT_PASSWORD }}
