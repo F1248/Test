@@ -19,3 +19,5 @@ jobs:
             - name: Install Xcode
               run: |
                 ./xcodes download --use-fastlane-auth --data-source apple 0
+              env:
+                FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
