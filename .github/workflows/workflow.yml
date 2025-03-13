@@ -11,4 +11,4 @@ jobs:
         runs-on: macos-15
         steps:
             - run: |
-                false | true
+                ls /Applications
