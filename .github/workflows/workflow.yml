@@ -16,8 +16,14 @@ jobs:
                 unzip xcodes.zip
                 echo "xcodes $(./xcodes version) installed"
 
+            - name: Install fastlane
+              run: |
+                brew install fastlane
+                echo "fastlane $(fastlane --version) installed"
+
             - name: Install Xcode
               run: |
+                fastlane spaceauth --user ${{ secrets.APPLE_ACCOUNT_EMAIL }}
                 ./xcodes download --use-fastlane-auth --data-source apple 0
               env:
                 FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
