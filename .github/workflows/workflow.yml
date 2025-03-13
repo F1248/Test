@@ -30,3 +30,4 @@ jobs:
               env:
                 FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
                 FASTLANE_COOKIE: ${{ secrets.FASTLANE_COOKIE }}
+                FASTLANE_PASSWORD: ${{ secrets.APPLE_ACCOUNT_PASSWORD }}
