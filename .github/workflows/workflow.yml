@@ -10,15 +10,42 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - name: Check condition
-              id: check
-              run: |
-                    if [ "$(echo "Test")" = "Test" ]; then
-                        echo "run_step=true" >> $GITHUB_ENV
-                    else
-                        echo "run_step=false" >> $GITHUB_ENV
-                    fi
+            - name: Select latest installed Xcode version
+              uses: maxim-lobanov/setup-xcode@master
+              with:
+                xcode-version: latest
 
-            - name: Conditional step
-              if: env.run_step == 'true'
-              run: echo "Step executed!"
+            - name: Checkout Build.txt from Xcode mirror
+              uses: actions/checkout@main
+              with:
+                repository: F1248/Xcode-Mirror
+                token: ${{ secrets.XCODE_MIRROR_TOKEN }}
+                sparse-checkout: Build.txt
+                sparse-checkout-cone-mode: false
+
+            - name: Check if latest Xcode version is installed
+              run: |
+                if [[ "$(xcodebuild -version | sed -n "s/Build version //p")" == "$(cat Build.txt)" ]]; then
+                    echo "latest_xcode_version_installed=true" >> "$GITHUB_ENV"
+                else
+                    echo "latest_xcode_version_installed=false" >> "$GITHUB_ENV"
+                fi
+
+            - name: Checkout Xcode mirror
+              if: !env.latest_xcode_version_installed
+              uses: actions/checkout@main
+              with:
+                repository: F1248/Xcode-Mirror
+                token: ${{ secrets.XCODE_MIRROR_TOKEN }}
+
+            - name: Install unxip
+              if: !env.latest_xcode_version_installed
+              run: |
+                curl --remote-name --location https://github.com/saagarjha/unxip/releases/latest/download/unxip
+                chmod +x unxip
+
+            - name: Install and select Xcode
+              if: !env.latest_xcode_version_installed
+              run: |
+                cat Xcode.xip-* | ./unxip -
+                sudo xcode-select --switch Xcode.app
