@@ -10,7 +10,6 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-
             - name: Checkout Xcode-Mirror
               uses: actions/checkout@main
               with:
