@@ -47,5 +47,7 @@ jobs:
             - name: Install and select Xcode
               if: env.latest_xcode_version_installed == 'false'
               run: |
+                ls
+                pwd
                 cat Xcode.xip-* | ./unxip -
                 sudo xcode-select --switch Xcode.app
