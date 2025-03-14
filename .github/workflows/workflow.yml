@@ -55,4 +55,4 @@ jobs:
                 ls
                 pwd
                 cat Xcode.xip-* | ./unxip -
-                sudo xcode-select --switch Xcode.app
+                sudo xcode-select --switch Xcode*.app
