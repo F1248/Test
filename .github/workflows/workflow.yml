@@ -11,7 +11,7 @@ jobs:
         runs-on: macos-15
         steps:
             - run: |
-                ls /Applications/Xcode.app
+                ls /Applications
                 xcode-select --print-path
                 echo "$(xcodebuild -version | tr "\n" " ")installed"
                 sudo softwareupdate --list --all --include-config-data
