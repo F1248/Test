@@ -16,5 +16,5 @@ jobs:
                 echo "$(xcodebuild -version | tr "\n" " ")installed"
                 softwareupdate --list --all --include-config-data
                 # xcode-select --install
-                xcode-select --reset
+                sudo xcode-select --reset
                 echo "$(xcodebuild -version | tr "\n" " ")installed"
