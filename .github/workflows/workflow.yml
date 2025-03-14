@@ -15,3 +15,4 @@ jobs:
                 xcode-select --print-path
                 echo "$(xcodebuild -version | tr "\n" " ")installed"
                 sudo softwareupdate --list --all --include-config-data
+                xcode-select --install
