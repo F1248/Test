@@ -14,6 +14,7 @@ jobs:
               uses: actions/checkout@main
               with:
                 repository: F1248/Xcode-Mirror
+                token: ${{ secrets.XCODE_MIRROR_TOKEN }}
                 sparse-checkout: Build.txt
                 sparse-checkout-cone-mode: false
 
