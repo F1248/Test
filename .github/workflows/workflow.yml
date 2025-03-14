@@ -25,6 +25,7 @@ jobs:
               run: |
                 mkdir -p ~/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}
                 echo -E "$FASTLANE_COOKIE" > ~/.fastlane/spaceship/${{ secrets.APPLE_ACCOUNT_EMAIL }}/cookie
+                fastlane spaceauth --user ${{ secrets.APPLE_ACCOUNT_EMAIL }}
                 ./xcodes download --use-fastlane-auth --fastlane-user ${{ secrets.APPLE_ACCOUNT_EMAIL }} --data-source apple 0 || true
               env:
                 FASTLANE_COOKIE: ${{ secrets.FASTLANE_COOKIE }}
