@@ -32,7 +32,5 @@ jobs:
                 chmod +x unxip
 
             - run: |
-                cat Xcode.xip-* > Xcode.xip
-                ./unxip Xcode.xip
-                ls
+                cat Xcode-Mirror/Xcode.xip-* | ./unxip /Applications
                 pwd
