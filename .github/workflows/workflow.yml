@@ -39,13 +39,13 @@ jobs:
                 token: ${{ secrets.XCODE_MIRROR_TOKEN }}
 
             - name: Install unxip
-              if: !env.latest_xcode_version_installed
+              if: env.latest_xcode_version_installed == 'false'
               run: |
                 curl --remote-name --location https://github.com/saagarjha/unxip/releases/latest/download/unxip
                 chmod +x unxip
 
             - name: Install and select Xcode
-              if: !env.latest_xcode_version_installed
+              if: env.latest_xcode_version_installed == 'false'
               run: |
                 cat Xcode.xip-* | ./unxip -
                 sudo xcode-select --switch Xcode.app
