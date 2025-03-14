@@ -11,6 +11,7 @@ jobs:
         runs-on: macos-15
         steps:
             - name: Check condition
+              id: check
               run: |
                     if [ "$(echo "Test")" = "Test" ]; then
                         echo "run_step=true" >> $GITHUB_ENV
