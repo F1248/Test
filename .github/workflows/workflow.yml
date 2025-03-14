@@ -44,4 +44,4 @@ jobs:
                 chmod +x unxip
 
             - run: |
-                cat Xcode.xip-* | ./unxip /Applications
+                sudo cat Xcode.xip-* | ./unxip /Applications
