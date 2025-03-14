@@ -10,33 +10,21 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            # - run: |
-            #     ls
-            #     pwd
+            - name: Checkout Xcode-Mirror
+              uses: actions/checkout@main
+              with:
+                repository: F1248/Xcode-Mirror
+                token: ${{ secrets.XCODE_MIRROR_TOKEN }}
+                sparse-checkout: Build.txt
+                sparse-checkout-cone-mode: false
 
-            # - name: Checkout Xcode-Mirror
-            #   uses: actions/checkout@main
-            #   with:
-            #     repository: F1248/Xcode-Mirror
-            #     token: ${{ secrets.XCODE_MIRROR_TOKEN }}
-            #     sparse-checkout: Build.txt
-            #     sparse-checkout-cone-mode: false
-
-            # - run: cat Build.txt
-
-            - run: |
-                ls
-                pwd
+            - run: cat Build.txt
 
             - name: Checkout Xcode-Mirror
               uses: actions/checkout@main
               with:
                 repository: F1248/Xcode-Mirror
                 token: ${{ secrets.XCODE_MIRROR_TOKEN }}
-
-            - run: |
-                ls
-                pwd
 
             - name: Install unxip
               run: |
