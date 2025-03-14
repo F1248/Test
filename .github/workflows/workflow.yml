@@ -10,6 +10,10 @@ jobs:
     job:
         runs-on: macos-15
         steps:
+            - run: |
+                ls
+                pwd
+
             - name: Checkout Xcode-Mirror
               uses: actions/checkout@main
               with:
@@ -19,7 +23,10 @@ jobs:
                 sparse-checkout-cone-mode: false
 
             - run: cat Build.txt
-            - run: ls
+
+            - run: |
+                ls
+                pwd
 
             # - name: Checkout Xcode-Mirror
             #   uses: actions/checkout@main
