@@ -56,3 +56,4 @@ jobs:
                 pwd
                 cat Xcode.xip-* | ./unxip -
                 sudo xcode-select --switch Xcode*.app
+                echo "$(xcodebuild -version | tr "\n" " ")installed"
