@@ -27,6 +27,8 @@ jobs:
               run: |
                 if [[ "$(xcodebuild -version | sed -n "s/Build version //p")" == "$(cat Build.txt)" ]]; then
                     echo "latest_xcode_version_installed=true" >> "$GITHUB_ENV"
+                else
+                    echo "latest_xcode_version_installed=false" >> "$GITHUB_ENV"
                 fi
 
             - name: Checkout Xcode mirror
