@@ -25,31 +25,29 @@ jobs:
 
             - name: Check if latest Xcode version is installed
               run: |
-                [[ "$(xcodebuild -version | sed -n "s/Build version //p")" != "$(cat Build.txt)" ]]
-                echo latest_xcode_version_installed=$? >> "$GITHUB_ENV"
+                if [[ "$(xcodebuild -version | sed -n "s/Build version //p")" == "$(cat Build.txt)" ]]; then
+                    echo latest_xcode_version_installed=true >> "$GITHUB_ENV"
+                else
+                    echo latest_xcode_version_installed=false >> "$GITHUB_ENV"
+                fi
 
-            - name: Test
-              if: env.latest_xcode_version_installed
-              run: echo "latest_xcode_version_installed is false"
+            - name: Checkout Xcode mirror
+              if: env.latest_xcode_version_installed == 'false'
+              uses: actions/checkout@main
+              with:
+                repository: F1248/Xcode-Mirror
+                token: ${{ secrets.XCODE_MIRROR_TOKEN }}
+                sparse-checkout: Xcode.xip-*
 
-            # - name: Checkout Xcode mirror
-            #   if: env.latest_xcode_version_installed == 'false'
-            #   uses: actions/checkout@main
-            #   with:
-            #   with:
-            #     repository: F1248/Xcode-Mirror
-            #     token: ${{ secrets.XCODE_MIRROR_TOKEN }}
-            #     sparse-checkout: Xcode.xip-*
+            - name: Install unxip
+              if: env.latest_xcode_version_installed == 'false'
+              run: |
+                curl --remote-name --location https://github.com/saagarjha/unxip/releases/latest/download/unxip
+                chmod +x unxip
 
-            # - name: Install unxip
-            #   if: env.latest_xcode_version_installed == 'false'
-            #   run: |
-            #     curl --remote-name --location https://github.com/saagarjha/unxip/releases/latest/download/unxip
-            #     chmod +x unxip
-
-            # - name: Install and select Xcode
-            #   if: env.latest_xcode_version_installed == 'false'
-            #   run: |
-            #     cat Xcode.xip-* | ./unxip -
-            #     sudo xcode-select --switch Xcode*.app
-            #     echo "$(xcodebuild -version | tr "\n" " ")installed"
+            - name: Install and select Xcode
+              if: env.latest_xcode_version_installed == 'false'
+              run: |
+                cat Xcode.xip-* | ./unxip -
+                sudo xcode-select --switch Xcode*.app
+                echo "$(xcodebuild -version | tr "\n" " ")installed"
