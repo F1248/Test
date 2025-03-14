@@ -32,7 +32,7 @@ jobs:
                 fi
 
             - name: Test
-              if: !env.latest_xcode_version_installed
+              if: !(env.latest_xcode_version_installed)
               run: echo "latest_xcode_version_installed is false"
 
             # - name: Checkout Xcode mirror
