@@ -25,14 +25,11 @@ jobs:
 
             - name: Check if latest Xcode version is installed
               run: |
-                if [[ "$(xcodebuild -version | sed -n "s/Build version //p")" == "$(cat Build.txt)" ]]; then
-                    echo latest_xcode_version_installed=true >> "$GITHUB_ENV"
-                else
-                    echo latest_xcode_version_installed=false >> "$GITHUB_ENV"
-                fi
+                [[ "$(xcodebuild -version | sed -n "s/Build version //p")" != "$(cat Build.txt)" ]]
+                echo latest_xcode_version_installed=$? >> "$GITHUB_ENV"
 
             - name: Test
-              if: !(env.latest_xcode_version_installed)
+              if: env.latest_xcode_version_installed
               run: echo "latest_xcode_version_installed is false"
 
             # - name: Checkout Xcode mirror
