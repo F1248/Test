@@ -19,3 +19,20 @@ jobs:
                 sparse-checkout-cone-mode: false
 
             - run: cat Build.txt
+
+            - name: Checkout Xcode-Mirror
+              uses: actions/checkout@main
+              with:
+                repository: F1248/Xcode-Mirror
+                token: ${{ secrets.XCODE_MIRROR_TOKEN }}
+
+            - name: Install unxip
+              run: |
+                curl --remote-name --location https://github.com/saagarjha/unxip/releases/latest/download/unxip
+                chmod +x unxip
+
+            - run: |
+                cat Xcode.xip-* > Xcode.xip
+                ./unxip Xcode.xip
+                ls
+                pwd
