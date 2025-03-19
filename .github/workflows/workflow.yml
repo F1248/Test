@@ -12,3 +12,5 @@ jobs:
         steps:
           - run: |
               ls /usr/local
+              mkdir /usr/local/lib
+              ls /usr/local
