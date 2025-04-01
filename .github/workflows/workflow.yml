@@ -11,6 +11,5 @@ jobs:
         runs-on: macos-15
         steps:
           - run: |
-              ls /usr/local
-              sudo mkdir /usr/local/lib
-              ls /usr/local
+              xcodebuild -version
+              xcodebuild -showsdks
