@@ -10,22 +10,5 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - name: Checkout Xcode mirror
-              uses: actions/checkout@main
-              with:
-                repository: F1248/Xcode-Mirror
-                token: ${{ secrets.XCODE_MIRROR_TOKEN }}
-
-            - name: Install unxip
-              run: |
-                curl --remote-name --location https://github.com/saagarjha/unxip/releases/latest/download/unxip
-                chmod +x unxip
-
-            - name: Install and select Xcode
-              run: |
-                cat Xcode.xip-* | ./unxip -
-                sudo xcode-select --switch Xcode*.app
-
             - run: |
-                xcodebuild -version
-                xcodebuild -showsdks
+                ls /Applications
