@@ -11,8 +11,4 @@ jobs:
         runs-on: macos-15
         steps:
             - run: |
-                /usr/bin/fdesetup status
-                echo $?
-            - run: |
-                /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
-                echo $?
+                pwd
