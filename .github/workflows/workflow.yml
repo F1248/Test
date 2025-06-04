@@ -1,14 +1,15 @@
 on:
-    # push:
+    push:
     workflow_dispatch:
 
-defaults:
-    run:
-        shell: bash
+# defaults:
+#     run:
+#         shell: bash
 
 jobs:
     job:
-        runs-on: macos-15-large
+        runs-on: macos-15
         steps:
             - run: |
-                arch
+                /usr/bin/fdesetup status
+                /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
