@@ -12,4 +12,7 @@ jobs:
         steps:
             - run: |
                 /usr/bin/fdesetup status
+                echo $?
+            - run: |
                 /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
+                echo $?
