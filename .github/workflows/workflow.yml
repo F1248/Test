@@ -10,5 +10,5 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - run: |
-                diskutil info disk3s5
+            - run: sudo du -d 1 -h /
+            - run: sudo du -d 2 -h /
