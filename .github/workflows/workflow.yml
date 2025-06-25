@@ -12,3 +12,5 @@ jobs:
         steps:
             - run: sudo du -d 1 -h /
             - run: sudo du -d 2 -h /
+            - run: sudo du -d 3 -h /
+            - run: sudo du -d 4 -h /
