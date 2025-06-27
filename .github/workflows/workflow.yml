@@ -10,7 +10,4 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - run: sudo du -d 1 -h /
-            - run: sudo du -d 2 -h /
-            - run: sudo du -d 3 -h /
-            - run: sudo du -d 4 -h /
+            - uses: appleboy/ssh-action@master
