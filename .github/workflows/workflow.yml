@@ -10,4 +10,4 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - uses: appleboy/ssh-action@master
+            - uses: mxschmitt/action-tmate@master
