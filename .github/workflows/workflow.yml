@@ -10,4 +10,4 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - uses: mxschmitt/action-tmate@master
+            - run: sudo du -h -t 1G / 2> /dev/null
