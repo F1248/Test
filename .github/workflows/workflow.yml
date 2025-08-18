@@ -11,4 +11,4 @@ jobs:
         runs-on: macos-15
         steps:
             - run: |
-                echo "::warning ::Test warning"
+                echo "::error ::Test warning"
