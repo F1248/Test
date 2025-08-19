@@ -11,4 +11,5 @@ jobs:
         runs-on: macos-15
         steps:
             - run: |
-                echo "::setFailed ::Test warning"
+                which -a sed
+                which -a gsed
