@@ -10,6 +10,4 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - run: |
-                which -a sed
-                which -a gsed
+            - uses: mxschmitt/action-tmate@master
