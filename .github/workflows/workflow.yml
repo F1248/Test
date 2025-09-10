@@ -10,4 +10,4 @@ jobs:
     job:
         runs-on: macos-15
         steps:
-            - uses: mxschmitt/action-tmate@master
+            - run: sw_vers
