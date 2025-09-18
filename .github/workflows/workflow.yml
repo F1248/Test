@@ -10,4 +10,4 @@ jobs:
     job:
         runs-on: macos-26
         steps:
-            - run: system_profiler
+            - run: echo $GITHUB_ACTIONS
