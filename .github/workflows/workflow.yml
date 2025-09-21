@@ -2,6 +2,9 @@ on:
     push:
     workflow_dispatch:
 
+env:
+    NSUnbufferedIO: YES
+
 defaults:
     run:
         shell: bash
@@ -10,4 +13,8 @@ jobs:
     job:
         runs-on: macos-26
         steps:
-            - run: echo $GITHUB_ACTIONS
+            - run: |
+                echo "First step 1!"
+                make test
+                echo "First step 2!"
+            - run: echo "Second step!"
