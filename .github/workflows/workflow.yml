@@ -13,4 +13,4 @@ jobs:
     job:
         runs-on: macos-26
         steps:
-            - run: which -a make
+            - run: which -a sed
