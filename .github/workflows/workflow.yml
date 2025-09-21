@@ -13,8 +13,4 @@ jobs:
     job:
         runs-on: macos-26
         steps:
-            - run: |
-                echo "First step 1!"
-                make test
-                echo "First step 2!"
-            - run: echo "Second step!"
+            - run: where make
