@@ -13,4 +13,4 @@ jobs:
     job:
         runs-on: macos-26
         steps:
-            - run: where make
+            - run: which -a make
