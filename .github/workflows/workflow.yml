@@ -5,12 +5,16 @@ on:
 env:
     NSUnbufferedIO: YES
 
-defaults:
-    run:
-        shell: bash
+# defaults:
+#     run:
+#         shell: bash
 
 jobs:
     job:
         runs-on: macos-26
         steps:
-            - run: which -a sed
+            - run: |
+                which -a cmake || true
+                which -a gmake || true
+                which -a gnumake || true
+                which -a make || true
