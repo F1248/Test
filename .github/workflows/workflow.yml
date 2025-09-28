@@ -14,7 +14,4 @@ jobs:
         runs-on: macos-26
         steps:
             - run: |
-                which -a cmake || true
-                which -a gmake || true
-                which -a gnumake || true
-                which -a make || true
+                which -a sed || true
