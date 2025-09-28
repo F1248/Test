@@ -10,8 +10,16 @@ env:
 #         shell: bash
 
 jobs:
-    job:
+    job-1:
         runs-on: macos-26
         steps:
             - run: |
-                which -a sed || true
+                echo test > test.txt
+                sed -i "s|e|o|g" test.txt
+
+    job-2:
+        runs-on: macos-26
+        steps:
+            - run: |
+                echo test > test.txt
+                sed -i "" "s|e|o|g" test.txt
