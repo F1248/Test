@@ -13,4 +13,5 @@ jobs:
     job:
         runs-on: macos-15-intel
         steps:
+            - uses: actions/checkout@main
             - run: swift Test.swift
