@@ -5,21 +5,14 @@ on:
 env:
     NSUnbufferedIO: YES
 
-# defaults:
-#     run:
-#         shell: bash
+defaults:
+    run:
+        shell: bash
 
 jobs:
-    job-1:
-        runs-on: macos-26
+    job:
+        runs-on: macos-15-intel
         steps:
             - run: |
-                echo test > test.txt
-                sed -i "s|e|o|g" test.txt
-
-    job-2:
-        runs-on: macos-26
-        steps:
-            - run: |
-                echo test > test.txt
-                sed -i "" "s|e|o|g" test.txt
+                system_profiler SPHardwareDataTypetxt
+                system_profiler SPSoftwareDataType
