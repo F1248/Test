@@ -13,6 +13,4 @@ jobs:
     job:
         runs-on: macos-15-intel
         steps:
-            - run: |
-                system_profiler SPHardwareDataType
-                system_profiler SPSoftwareDataType
+            - run: swift Test.swift
