@@ -14,5 +14,5 @@ jobs:
         runs-on: macos-15-intel
         steps:
             - run: |
-                system_profiler SPHardwareDataTypetxt
+                system_profiler SPHardwareDataType
                 system_profiler SPSoftwareDataType
