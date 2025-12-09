@@ -11,8 +11,7 @@ defaults:
 
 jobs:
     job:
-        runs-on: macos-15
+        runs-on: macos-15-intel
         steps:
-            - uses: actions/checkout@main
             - run: |
-                curl -I https://getsupport.apple.com/api -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.112 Safari/537.36'
+                ioreg -b -f -i -l -t -w 0
