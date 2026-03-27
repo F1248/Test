@@ -11,7 +11,8 @@ defaults:
 
 jobs:
     job:
-        runs-on: macos-15-intel
+        runs-on: macos-26
         steps:
-            - run: |
-                ioreg -b -f -i -l -t -w 0
+            - uses: maxim-lobanov/setup-xcode@master
+              with:
+                xcode-version: "26.4.0"
