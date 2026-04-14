@@ -13,6 +13,6 @@ jobs:
     job:
         runs-on: macos-26
         steps:
-            - uses: maxim-lobanov/setup-xcode@master
+            - uses: https://github.com/maxim-lobanov/setup-xcode@master
               with:
                 xcode-version: "26.4.0"
