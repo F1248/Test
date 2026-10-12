@@ -11,11 +11,8 @@ defaults:
 
 jobs:
     job:
-        runs-on: macos-26
+        runs-on: macos-27
         steps:
             - uses: maxim-lobanov/setup-xcode@master
               with:
-                xcode-version: "26.6.0"
-
-            - run: |
-                echo 'import Foundation;assert(dlopen("/System/Library/Frameworks/SwiftUI.framework/SwiftUI", RTLD_NOW) != nil);print("_NSSwiftUICoreFeatureFlags: \(NSClassFromString("_NSSwiftUICoreFeatureFlags").debugDescription)");print("_NSSolarium: \(NSClassFromString("_NSSolarium").debugDescription)")' | swift repl
+                xcode-version: "27.0.0"
