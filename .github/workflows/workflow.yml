@@ -11,8 +11,6 @@ defaults:
 
 jobs:
     job:
-        runs-on: macos-27
+        runs-on: xcode-27
         steps:
-            - uses: maxim-lobanov/setup-xcode@master
-              with:
-                xcode-version: "27.0.0"
+          - run: softwareupdate --list
